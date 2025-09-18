@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var scoreboard = Scoreboard()
+    private var startingPoints = 0
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -29,7 +30,24 @@ struct ContentView: View {
             Button("Add Player", systemImage: "plus") {
                 scoreboard.players.append(Player(name: "", score: 0))
             }
+            
             Spacer()
+            
+            switch scoreboard.state {
+            case .setup:
+                Button("Start Game", systemImage: "play.fill") {
+                    scoreboard.state = .playing
+                    scoreboard.resetScores(to: startingPoints)
+                }
+            case .playing:
+                Button("Stop Game", systemImage: "stop.fill") {
+                    scoreboard.state = .gameOver
+                }
+            case .gameOver:
+                Button("Reset Game", systemImage: "arrow.counterclockwide") {
+                    scoreboard.state = .setup
+                }
+            }
         }
         .padding()
     }
