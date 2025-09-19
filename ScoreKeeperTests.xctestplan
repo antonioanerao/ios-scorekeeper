@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "C2A71A9B-4491-49E7-B48E-87E98CC12001",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ScoreKeeper.xcodeproj",
+        "identifier" : "A42B2DAF2E7C140C00BFA3F8",
+        "name" : "ScoreKeeperTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "8A68FD78-3BB1-4CD4-B626-A3549BE2315A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ScoreKeeper.xcodeproj",
+      "identifier" : "A4D216792E72CDFB00B06FEA",
+      "name" : "ScoreKeeper"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ScoreKeeper.xcodeproj",
+        "identifier" : "A42B2DAF2E7C140C00BFA3F8",
+        "name" : "ScoreKeeperTests"
+      }
+    }
+  ],
+  "version" : 1
+}
